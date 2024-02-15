@@ -1,6 +1,6 @@
 FROM docker.io/alpine:3.17.0
 
-RUN apk --no-cache add exim tini && \
+RUN apk --no-cache add exim tini bash && \
     mkdir /var/spool/exim && \
     chmod 777 /var/spool/exim && \
     ln -sf /dev/stdout /var/log/exim/mainlog && \
